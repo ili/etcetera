@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<package >
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>etcetera</id>
     <version>0.5.0</version>
     <authors>Dru Sellers</authors>
     <owners>Dru Sellers</owners>
-    <licenseUrl>https://github.com/drusellers/etcetera/blob/master/LICENSE</licenseUrl>
+		<title>etcetera 0.5.0</title>
+		<licenseUrl>https://github.com/drusellers/etcetera/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/drusellers/etcetera</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple C# client for etcd</description>
@@ -14,7 +15,14 @@
     <tags>etcd</tags>
     <language>en-US</language>
     <dependencies>
-      <dependency id="RestSharp" version="104.4.0" />
+			<group>
+				<dependency id="RestSharp" version="104.4.0" />
+			</group>
     </dependencies>
-  </metadata>
+	</metadata>
+	<files>
+		<file src="etcetera\bin\Release\etcetera.dll"      target="lib\Net45\etcetera.dll" />
+		<file src="etcetera\bin\Release\etcetera.4.dll"    target="lib\Net40\etcetera.4.dll" />
+		<file src="etcetera\bin\Release\etcetera.4.CP.dll" target="lib\Net40-Client\etcetera.4.CP.dll" />
+	</files>
 </package>
